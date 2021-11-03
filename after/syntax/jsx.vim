@@ -6,7 +6,8 @@
 " URL:        https://github.com/alampros/vim-styled-jsx
 " Depends:    mxw/vim-jsx
 "
-" Based on https://github.com/fleischie/vim-styled-components (thanks!)
+" Original Based on https://github.com/fleischie/vim-styled-components (thanks!)
+" This is a fork with a small change from https://github.com/alampros/vim-styled-jsx (thank you!)
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -58,7 +59,7 @@ syntax cluster CSS
 \          cssAttrRegion
 
 syn region styledJsxTag start=/<style.*jsx.*>/ keepend end=+</style>+ containedin=jsxRegion contains=@XMLSyntax
-syn region styledJsxTemplateString start=+`+ keepend contained containedin=styledJsxTag contains=@htmlCss,@CSS end=+`+
+syn region styledJsxTemplateString start=+{\?`+ keepend contained containedin=styledJsxTag contains=@htmlCss,@CSS end=+`+
 
 
 if exists('s:current_syntax')
